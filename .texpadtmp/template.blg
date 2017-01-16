@@ -1,0 +1,87 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: template.aux
+The style file: ../spphys.bst
+Database file #1: ../bibfile.bib
+Repeated entry---line 1039 of file ../bibfile.bib
+ : @inproceedings{Gois2016
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1695 of file ../bibfile.bib
+ : @article{Bertolino2008
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1709 of file ../bibfile.bib
+ : @article{MarkUtting2012
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1986 of file ../bibfile.bib
+ : @book{Halili2008
+ :                 ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in Sandler2004
+Warning--missing publisher in Perry2004
+Warning--missing publisher in Lewis2005
+Warning--missing school in Jiang2010
+Warning--missing publisher in Erinle2013
+Warning--empty journal in Goncalves2014
+Warning--empty author in Bertolino2008
+Warning--empty journal in Menasce2002a
+Warning--there's a number but no volume in Menasce2002a
+Warning--missing publisher in MohammadS.Obaidat
+Warning--empty year in MohammadS.Obaidat
+Warning--there's a number but no volume in Vogele2016
+Warning--missing school in Garousi2006
+Warning--empty year in DiAlesio2014
+Warning--empty journal in Sullivan
+Warning--empty year in Sullivan
+Warning--empty journal in Canfora
+Warning--empty year in Canfora
+Warning--empty journal in Tracey1998
+Warning--there's a number but no volume in Pohlheim2005
+Warning--missing publisher in Dustin1999
+Warning--missing publisher in Halili2008
+Warning--there's a number but no volume in Wert2013a
+Warning--empty journal in Cortellessa2007
+You've used 60 entries,
+            2812 wiz_defined-function locations,
+            996 strings with 17774 characters,
+and the built_in function-call counts, 26161 in all, are:
+= -- 2489
+> -- 539
+< -- 19
++ -- 294
+- -- 159
+* -- 1206
+:= -- 2529
+add.period$ -- 47
+call.type$ -- 60
+change.case$ -- 7
+chr.to.int$ -- 6
+cite$ -- 84
+duplicate$ -- 3123
+empty$ -- 2234
+format.name$ -- 202
+if$ -- 5796
+int.to.chr$ -- 0
+int.to.str$ -- 60
+missing$ -- 524
+newline$ -- 236
+num.names$ -- 59
+pop$ -- 1258
+preamble$ -- 2
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1275
+stack$ -- 0
+substring$ -- 890
+swap$ -- 2277
+text.length$ -- 17
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 24
+while$ -- 136
+width$ -- 62
+write$ -- 547
+(There were 4 error messages)

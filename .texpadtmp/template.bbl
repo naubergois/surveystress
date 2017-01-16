@@ -1,0 +1,297 @@
+\newcommand{\noopsort}[1]{} \newcommand{\printfirst}[2]{#1}
+  \newcommand{\singleletter}[1]{#1} \newcommand{\switchargs}[2]{#2#1}
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI \discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI \discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{Sandler2004}
+C.~Sandler, T.~Badgett, T.~Thomas,  p. 200 (2004)
+
+\bibitem{Corporation2007}
+M.~Corporation.
+\newblock {Performance Testing Guidance for Web Applications} (2007).
+\newblock
+  \urlprefix\url{http://www.amazon.com/Performance-Testing-Guidance-Web-Applications/dp/0735625700
+  http://msdn.microsoft.com/en-us/library/bb924375.aspx}
+
+\bibitem{Perry2004}
+W.E. Perry, \emph{{Effective methods for software testing}} (2004).
+\newblock \doi{10.1002/1521-3773(20010316)40:6<9823::AID-ANIE9823>3.3.CO;2-C}.
+\newblock
+  \urlprefix\url{http://onlinelibrary.wiley.com/doi/10.1002/cbdv.200490137/abstract$\backslash$nhttp://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Effective+Methods+for+Software+Testing{\#}2$\backslash$nhttp://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Effective+methods+for}
+
+\bibitem{DiLucca2006}
+G.a. {Di Lucca}, A.R. Fasolino, Information and Software Technology
+  \textbf{48}, 1172 (2006).
+\newblock \doi{10.1016/j.infsof.2006.06.006}
+
+\bibitem{Lewis2005}
+W.E. Lewis, D.~Dobbs, G.~Veerapillai, \emph{{Software testing and continuous
+  quality improvement}} (2005).
+\newblock
+  \urlprefix\url{http://books.google.com/books?id=fgaBDd0TfT8C{\&}pgis=1}
+
+\bibitem{Molyneaux2009}
+I.~Molyneaux, \emph{{The Art of Application Performance Testing: Help for
+  Programmers and Quality Assurance}}, 1st edn. ("O'Reilly Media, Inc.", 2009)
+
+\bibitem{Afzal2009a}
+W.~Afzal, R.~Torkar, R.~Feldt, Information and Software Technology
+  \textbf{51}(6), 957 (2009).
+\newblock \doi{10.1016/j.infsof.2008.12.005}
+
+\bibitem{Jiang2010}
+Z.~Jiang, {Automated analysis of load testing results}.
+\newblock Ph.D. thesis (2010).
+\newblock \urlprefix\url{http://dl.acm.org/citation.cfm?id=1831726}
+
+\bibitem{Erinle2013}
+B.~Erinle, \emph{{Performance Testing With JMeter 2.9}} (2013)
+
+\bibitem{Feitelson2013}
+D.G. Feitelson, \emph{{Workload Modeling for Computer Systems Performance
+  Evaluation}} (Cambridge University Press, 2013)
+
+\bibitem{Goncalves2014}
+M.C. Gon\c{c}alves,   (2014)
+
+\bibitem{Luo2015}
+Q.~Luo, A.~Nair, M.~Grechanik, D.~Poshyvanyk, Empirical Software Engineering
+  pp. 1--51 (2015).
+\newblock \doi{10.1007/s10664-015-9413-5}
+
+\bibitem{Wert2014}
+A.~Wert, M.~Oehler, C.~Heger, R.~Farahbod, QoSA 2014 - Proceedings of the 10th
+  International ACM SIGSOFT Conference on Quality of Software Architectures
+  (Part of CompArch 2014) pp. 3--12 (2014).
+\newblock \doi{10.1145/2602576.2602579}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1145/2602576.2602579}
+
+\bibitem{MarkUtting2012}
+A.P. {Mark Utting}, B.~Legeard, Software Testing Verification and Reliability
+  \textbf{24}(8), 297 (2012).
+\newblock \doi{10.1002/stvr}
+
+\bibitem{Bertolino2008}
+Testing of Software and {\ldots} pp. 266--282 (2008)
+
+\bibitem{Hierons2009}
+R.M. Hierons, K.~Bogdanov, J.P. Bowen, R.~Cleaveland, J.~Derrick, J.~Dick,
+  M.~Gheorghe, M.~Harman, K.~Kapoor, P.~Krause, G.~L{\"{u}}ttgen, A.J.H.
+  Simons, S.~Vilkomir, M.R. Woodward, H.~Zedan, ACM Comput. Surv.
+  \textbf{41}(2), 1 (2009).
+\newblock \doi{http://doi.acm.org/10.1145/1459352.1459354}
+
+\bibitem{Wang2013}
+X.~Wang, B.~Zhou, W.~Li, Journal of the Chinese Institute of Engineers
+  \textbf{36}(1), 74 (2013).
+\newblock \doi{10.1080/02533839.2012.726028}.
+\newblock
+  \urlprefix\url{http://www.tandfonline.com/doi/abs/10.1080/02533839.2012.726028}
+
+\bibitem{Draheim2006b}
+D.~Draheim, J.~Grundy, J.~Hosking, C.~Lutteroth, G.~Weber, in \emph{Conference
+  on Software Maintenance and Reengineering (CSMR'06)} (2006).
+\newblock \doi{10.1109/CSMR.2006.43}
+
+\bibitem{Menasce2002a}
+D.A. Menasc{\'{e}}, G.~Mason,  (June), 1 (2002)
+
+\bibitem{MohammadS.Obaidat}
+P.N. {Mohammad S. Obaidat}, F.~Zarai, \emph{{Modeling and Simulation of
+  Computer Networks and Systems Methodologies and Applications}}
+
+\bibitem{Vogele2016}
+C.~Vogele, A.~van Hoorn, E.~Schulz, W.~Hasselbring, H.~Krcmar, Software and
+  Systems Modeling (October), 1 (2016).
+\newblock \doi{10.1007/s10270-016-0566-5}.
+\newblock \urlprefix\url{"http://dx.doi.org/10.1007/s10270-016-0566-5}
+
+\bibitem{Grechanik2012}
+M.~Grechanik, C.~Fu, Q.~Xie, 2012 34th International Conference on Software
+  Engineering (ICSE) pp. 156--166 (2012).
+\newblock \doi{10.1109/ICSE.2012.6227197}
+
+\bibitem{Harman2010}
+M.~Harman, P.~McMinn, IEEE Transactions on Software Engineering \textbf{36}(2),
+  226 (2010).
+\newblock \doi{10.1109/TSE.2009.71}
+
+\bibitem{Alba2008}
+E.~Alba, F.~Chicano, Computers and Operations Research \textbf{35}(10), 3161
+  (2008).
+\newblock \doi{10.1016/j.cor.2007.01.016}
+
+\bibitem{Baars2011}
+A.I. Baars, K.~Lakhotia, T.E.J. Vos, J.~Wegener, Federated Conference on
+  Computer Science and Information Systems (FedCSIS 2011) pp. 917--923 (2011).
+\newblock
+  \urlprefix\url{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp={\&}arnumber=6078178}
+
+\bibitem{McMinn2004}
+P.~McMinn, R.~Court, S.~Testing, P.~Street, Software testing, Verification and
+  reliability \textbf{14}, 1 (2004).
+\newblock \doi{10.1002/stvr.294}
+
+\bibitem{Garousi2006}
+V.~Garousi, {Traffic-aware Stress Testing of Distributed Real-Time Systems
+  based on UML Models using Genetic Algorithms}.
+\newblock Ph.D. thesis (2006)
+
+\bibitem{Garousi2010}
+V.~Garousi, IEEE Transactions on Software Engineering \textbf{36}(6), 778
+  (2010).
+\newblock \doi{10.1109/TSE.2010.5}
+
+\bibitem{DiAlesio2013}
+S.~{Di Alesio}, S.~Nejati, L.~Briand, A.~Gotlieb, IEEE Xplore pp. 158--167
+  (2013).
+\newblock \doi{10.1109/ISSRE.2013.6698915}
+
+\bibitem{DiAlesio2014}
+S.~{Di Alesio}, S.~Nejati, L.~Briand, A.~Gotlieb, Principles and Practice of
+  Constraint Programming pp. 813--830.
+\newblock \doi{10.1007/978-3-319-10428-7{\_}58}
+
+\bibitem{Alesio2015}
+S.D.I. Alesio, L.C. Briand, S.~Nejati, A.~Gotlieb, ACM Transactions on Software
+  Engineering and Methodology \textbf{25}(1) (2015)
+
+\bibitem{Gois2016}
+N.~Gois, P.~Porfirio, A.~Coelho, T.~Barbosa, in \emph{Proceedings of the 2016
+  Latin American Computing Conference (CLEI)} (2016), pp. 718--728
+
+\bibitem{Sullivan}
+M.O. Sullivan, S.~V\"{o}ssner, J.~Wegener, D.b. Ag,  pp. 1--20
+
+\bibitem{tracey2000search}
+N.J. Tracey, A search-based automated test-data generation framework for
+  safety-critical software.
+\newblock Ph.D. thesis, Citeseer (2000)
+
+\bibitem{Alander}
+J.T.J. Alander, T.~Mantere, P.~Turunen, in \emph{Neural Nets and Genetic
+  Algorithms} (1998)
+
+\bibitem{Wegener1997}
+J.~Wegener, H.~Sthamer, B.F. Jones, D.E. Eyres, Software Quality Journal
+  \textbf{6}(2), 127 (1997).
+\newblock \doi{10.1023/A:1018551716639}.
+\newblock
+  \urlprefix\url{http://www.springerlink.com/index/uh26067rt3516765.pdf}
+
+\bibitem{J.WegenerK.GrimmM.GrochtmannH.Sthamer1996}
+B.J. {J. Wegener, K. Grimm, M. Grochtmann, H. Sthamer}, EuroSTAR'96:
+  Proceedings of the Fourth International Conference on Software Testing
+  Analysis and Review  (1996)
+
+\bibitem{Briand2005}
+L.C. Briand, Y.~Labiche, M.~Shousha, Proceedings of the 2005 conference on
+  Genetic and evolutionary computation - GECCO '05 p. 1021 (2005).
+\newblock \doi{10.1145/1068009.1068183}
+
+\bibitem{Canfora}
+G.~Canfora, M.D. Penta, R.~Esposito, M.L. Villani,
+
+\bibitem{Wegener1998}
+J.~Wegener, M.~Grochtmann, Real-Time Systems \textbf{15}(3), 275 (1998).
+\newblock \doi{Doi 10.1023/A:1008096431840}
+
+\bibitem{Mueller1998}
+F.~Mueller, J.~Wegener, Proceedings. Fourth IEEE Real-Time Technology and
+  Applications Symposium (Cat. No.98TB100245)  (1998).
+\newblock \doi{10.1109/RTTAS.1998.683198}
+
+\bibitem{Puschner1998}
+P.~Puschner, R.~Nossal, Proceedings 19th IEEE Real-Time Systems Symposium (Cat.
+  No.98CB36279)  (1998).
+\newblock \doi{10.1109/REAL.1998.739738}
+
+\bibitem{Stations}
+H.~{Wegener, Joachim and Pitschinetz, Roman and Sthamer}, Proceedings of the
+  1st International Workshop on Automated Program Analysis, Testing and
+  Verification (WAPATV'00)  (2000)
+
+\bibitem{Gross2000}
+H.~Gross, B.F. Jones, D.E. Eyres, Software, IEE Proceedings- \textbf{147}(2),
+  25 (2000).
+\newblock \doi{10.1049/ip-sen}
+
+\bibitem{Penta2007}
+M.D. Penta, G.~Canfora, G.~Esposito, in \emph{Proceedings of the 9th annual
+  conference on Genetic and evolutionary computation} (2007), pp. 1090--1097
+
+\bibitem{Garousi2008}
+V.~Garousi, Proceedings of the 10th annual conference on Genetic and
+  evolutionary computation - GECCO '08 p. 1743 (2008).
+\newblock \doi{10.1145/1389095.1389433}
+
+\bibitem{Tracey1998}
+N.J. Tracey, J.a. Clark, K.C. Mander,   (1998)
+
+\bibitem{Pohlheim2005}
+H.~Pohlheim, M.~Conrad, A.~Griep, Analysis (724), 804 (2005).
+\newblock \doi{10.4271/2005-01-0750}
+
+\bibitem{shousha2003performance}
+M.~Shousha, Performance stress testing of real-time systems using genetic
+  algorithms.
+\newblock Ph.D. thesis, Carleton University Ottawa (2003)
+
+\bibitem{Dustin1999}
+E.~Dustin, J.~Rashka, J.~Paul, \emph{{Automated Software Testing: Introduction,
+  Management, and Performance}} (1999)
+
+\bibitem{Trent1995}
+G.~Trent, M.~Sake, WWW Conference'95  (1995)
+
+\bibitem{Halili2008}
+E.H. Halili, \emph{{Apache JMeter: A practical beginner's guide to automated
+  testing and performance measurement for your websites.}} (2008).
+\newblock \doi{10.1017/CBO9781107415324.004}
+
+\bibitem{Wert2013a}
+A.~Wert, J.~Happe, L.~Happe, Proceedings - International Conference on Software
+  Engineering (May), 552 (2013).
+\newblock \doi{10.1109/ICSE.2013.6606601}
+
+\bibitem{brown1998antipatterns}
+W.H. Brown, R.C. Malveau, H.W. McCormick, T.J. Mowbray, \emph{AntiPatterns:
+  refactoring software, architectures, and projects in crisis} (John Wiley \&
+  Sons, Inc., 1998)
+
+\bibitem{Cortellessa2007}
+V.~Cortellessa, L.~Frittella,  pp. 171--185 (2007)
+
+\bibitem{Smith2000}
+C.U. Smith, L.G. Williams, Proceedings of the second international workshop on
+  Software and performance - WOSP '00 pp. 127--136 (2000).
+\newblock \doi{10.1145/350391.350420}.
+\newblock \urlprefix\url{http://portal.acm.org/citation.cfm?doid=350391.350420}
+
+\bibitem{Vetoio2011}
+C.~Trubiani, Language  (2011)
+
+\bibitem{Smith2002}
+C.~Smith, L.~Williams, Cmg-Conference- \textbf{2}, 797 (2002).
+\newblock
+  \urlprefix\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.100.6968{\&}rep=rep1{\&}type=pdf}
+
+\bibitem{Smith2003}
+C.U. Smith, L.G. Williams, Computer Measurement Group Conference pp. 717--725
+  (2003).
+\newblock
+  \urlprefix\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.123.4517{\&}rep=rep1{\&}type=pdf}
+
+\bibitem{Arcelli2012}
+D.~Arcelli, V.~Cortellessa, C.~Trubiani, Proceedings of the 8th international
+  ACM SIGSOFT conference on Quality of Software Architectures (QoSA '12) pp.
+  33--42 (2012).
+\newblock \doi{10.1145/2304696.2304704}.
+\newblock \urlprefix\url{http://doi.acm.org/10.1145/2304696.2304704}
+
+\end{thebibliography}

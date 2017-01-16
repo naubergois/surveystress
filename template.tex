@@ -1,0 +1,954 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+\begin{filecontents*}{example.eps}
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 19 19 221 221
+%%CreationDate: Mon Sep 29 1997
+%%Creator: programmed by hand (JK)
+%%EndComments
+gsave
+newpath
+  20 20 moveto
+  20 220 lineto
+  220 220 lineto
+  220 20 lineto
+closepath
+2 setlinewidth
+gsave
+  .4 setgray fill
+grestore
+stroke
+grestore
+\end{filecontents*}
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+
+
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
+%\usepackage[latin1]{inputenc}
+\usepackage{pifont} 
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{graphicx,url}
+\usepackage{placeins}
+\usepackage{adjustbox}
+\usepackage[english]{babel}
+\usepackage{lipsum}
+\usepackage{multicol}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage[svgnames]{xcolor} 
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{calc} 
+\usepackage{array,url,kantlipsum}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{txfonts}
+\usepackage{colortbl}%
+  \newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+  
+\lstset{
+language=Java,
+basicstyle=\small\ttfamily,
+numbers=left,
+numbersep=5pt,
+xleftmargin=20pt,
+frame=tb,
+framexleftmargin=20pt
+}
+
+\renewcommand*\thelstnumber{\arabic{lstnumber}:}
+
+\DeclareCaptionFormat{mylst}{\hrule#1#2#3}
+\captionsetup[lstlisting]{format=mylst,labelfont=bf,singlelinecheck=off,labelsep=space,font={normalsize,tt}}
+
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{lipsum}
+
+
+%% This bit allows you to either specify only the files which you wish to
+%% process, or `all' to process all files which you \include.
+%% Krishna Sethuraman (1990).
+
+%\typein [\files]{Enter file names to process, (chap1,chap2 ...), or `all' to
+%process all files:}
+%\def\all{all}
+%\ifx\files\all \typeout{Including all files.} \else %\typeout{Including only \files.} \includeonly{\files} \fi
+
+\newmdenv[innerlinewidth=0.5pt, roundcorner=4pt,innerleftmargin=6pt,
+innerrightmargin=6pt,innertopmargin=6pt,innerbottommargin=6pt]{mybox}
+
+
+
+
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+% etc.
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+% \journalname{myjournal}
+%
+\begin{document}
+
+\title{Insert your title here%\thanks{Grants or other notes
+%about the article that should go on the front page should be
+%placed here. General acknowledgments should be placed at the end of the article.}
+}
+\subtitle{Do you have a subtitle?\\ If so, write it here}
+
+%\titlerunning{Short form of title}        % if too long for running head
+
+\author{First Author         \and
+        Second Author %etc.
+}
+
+%\authorrunning{Short form of author list} % if too long for running head
+
+\institute{F. Author \at
+              first address \\
+              Tel.: +123-45-678910\\
+              Fax: +123-45-678910\\
+              \email{fauthor@example.com}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+           \and
+           S. Author \at
+              second address
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+\begin{abstract}
+Insert your abstract here. Include keywords, PACS and mathematical
+subject classification numbers as needed.
+\keywords{First keyword \and Second keyword \and More}
+% \PACS{PACS code1 \and PACS code2 \and more}
+% \subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\section{Introduction}
+
+Load, performance, and stress testing are typically done to locate bottlenecks in a system, to support a performance-tuning effort, and to collect other performance-related indicators to help stakeholders get informed about the quality of the application being tested \cite{Sandler2004} \cite{Corporation2007}. 
+
+Typically, the most common kind of performance testing for Internet applications is load testing. Application load can be assessed in a variety of ways \cite{Perry2004}:
+
+\begin{itemize}
+\item Concurrency. Concurrency testing seeks to validate the performance of an application with a given number of concurrent interactive users \cite{Perry2004}.
+\item Stress. Stress testing seeks to validate the performance of an application when certain aspects of the application are stretched to their maximum limits. This can include maximum number of users, and can also include maximizing table values and data values \cite{Perry2004}.
+\item Throughput. Throughput testing seeks to validate the number of transactions to be processed by an application during a given period of time. For example, one type of throughput test might be to attempt to process 100,000 transactions in one hour \cite{Perry2004}.
+\end{itemize}
+
+
+The performance testing aims at verifying a specified system performance. This kind of test is executed by simulating hundreds of simultaneous users or more over a defined time interval \cite{DiLucca2006}. The purpose of this assessment is to demonstrate that the system reaches its performance objectives \cite{Sandler2004}.  Term often used interchangeably with “stress” and “load” testing. Ideally “performance” testing is defined in requirements documentation or QA or Test Plans \cite{Lewis2005}.
+
+
+In a load testing, the system is evaluated at predefined load levels \cite{DiLucca2006}. The aim of this test is to determine whether the system can reach its performance targets for availability, concurrency, throughput, and response time. Load testing is the closest to real application use \cite{Molyneaux2009}. A typical load test can last from several hours to a few days, during which system behavior data like execution logs and various metrics are collected \cite{Afzal2009a}. 
+
+Stress testing investigates the behavior of the system under conditions
+that overload its resources. The stress testing verifies the system behavior against heavy workloads \cite{Sandler2004} \cite{Lewis2005}, which are executed to evaluate a system beyond its limits, validate system response in activity peaks, and verify whether the system is able to recover from these conditions. It differs from other kinds of testing in that the system is executed on or beyond its breakpoints, forcing the application or the supporting infrastructure to fail \cite{DiLucca2006} \cite{Molyneaux2009}.
+
+
+This chapter surveys the state of the art literature in stress testing research. The thesis extends the survey presented by Jiang et al. to the Stress Testing context \cite{Jiang2010}.  This survey will be useful for stress testing practitioners and software engineering researchers with interests in testing and analyzing software systems. We proposed the following four research questions:
+
+
+\begin{itemize}
+\item How is a proper stress designed?
+\item How is a stress test executed and automated?
+\item What are the main problems found by stress tests?
+\item How are the stress tests results analysed?
+\end{itemize}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1\textwidth]{./images/systematic.png}
+\caption{Bubble chart for results of search with the keyword 'Load Testing'}
+\label{fig:testprocess}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1\textwidth]{./images/type.png}
+\caption{Bubble chart for results of search with the keyword 'Load Testing'}
+\label{fig:testprocess}
+\end{figure}
+
+
+
+The population in this study is the domain of software testing. Intervention includes application of stress test techniques to test different types of non-functional properties. We used the following search terms:
+
+\begin{itemize}
+\item Load Testing: load test, Load Testing
+\item Stress Testing: stress test, stress testing
+\item Performance Testing: performance tests
+\item Test tools: jmeter, load runner, performance tester
+\end{itemize}
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1\textwidth]{./images/loadtestingbuble.png}
+\caption{Bubble chart for results of search with the keyword 'Load Testing'}
+\label{fig:testprocess}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{./images/wordcloudloadtesting.png}
+\caption{Word cloud for results of search with the keyword 'Load Testing'}
+\label{fig:testprocess}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1\textwidth]{./images/stresstestingbuble.png}
+\caption{Bubble chart for results of search with the keyword 'Stress Testing'}
+\label{fig:testprocess}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{./images/wordcloudstresstesting.png}
+\caption{Word cloud for results of search with the keyword 'Stress Testing'}
+\label{fig:testprocess}
+\end{figure}
+
+
+\subsection{Stress Test Process}
+
+Contrary to functional testing, which has clear testing objectives, Stress testing objectives are not clear in the early development stages and are often defined later on a case-by-case basis. The Fig. \ref{fig:testprocess} shows a common Load, Performance and Stress test process  \cite{Jiang2010}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.5\textwidth]{./images/testprocess.png}
+\caption{Load, Performance and Stress Test Process \cite{Jiang2010}\cite{Erinle2013}}
+\label{fig:testprocess}
+\end{figure}
+
+
+The goal of the load design phase is to devise a load, which can uncover non-functional problems. Once the load is defined, the system under test executes the load and the system behavior under load is recorded. Load testing practitioners then analyze the system behavior to detect problems \cite{Jiang2010}. 
+
+Once a proper load is designed, a load test is executed. The load test execution phase consists of the following three main aspects: (1) Setup, which includes system deployment and test execution setup; (2) Load Generation and Termination, which consists of generating the load; and (3) Test Monitoring and Data Collection, which includes recording the system behavior during execution\cite{Jiang2010}. 
+
+The core activities in conducting an usual Load, Performance and Stress tests are \cite{Erinle2013}: 
+
+\begin{itemize}
+\item Identify the test environment: identify test and production environments and knowing the hardware, software, and network configurations helps derive an effective test plan and identify testing challenges from the outset.
+
+\item Identify acceptance criteria: identify the response time, throughput, and resource utilization goals and constraints.
+
+\item Plan and design tests:identify the test scenarios.In the context of testing, a scenario is a sequence of steps in an application. It can represent a use case or a business function such as searching a product catalog, adding an item to a shopping cart, or placing an order \cite{Corporation2007}. This task includes a description
+of the speed, availability, data volume throughput rate, response
+time, and recovery time of various functions, stress, and so on. This
+serves as a basis for understanding the level of performance and
+stress testing that may be required to each test scenario \cite{Lewis2005}.
+
+\item Prepare the test environment: configure the test environment, tools, and resources necessary to conduct the planned test scenarios.
+
+\item Record the test plan: record the planned test scenarios using a testing tool.
+
+\item Run the tests: Once recorded, execute the test plans under light load and verify the correctness of the test scripts and output results.
+
+\item Analyze results, report, and retest: examine the results of each successive run and identify areas of bottleneck that need addressing.  
+
+\end{itemize}
+
+
+
+
+
+\section{Research Question 1:How is a proper stress designed?}
+
+The design of a stress test depends intrinsically on the load model applied to the software under test. Based on the objectives, there are two general schools of thought for designing a proper load to achieve such objectives \cite{Afzal2009a}:
+
+\begin{itemize}
+\item Designing Realistic Loads (Workload Descriptive). 
+\item Designing Fault-Inducing Loads ( Workload Generative).
+\end{itemize}
+
+In Designing Realistic Loads, the main goal of testing is to ensure that the system can function correctly once. Designing Fault-Inducing Loads  aims to design loads, which are likely to cause functional or non-functional problems \cite{Afzal2009a}.
+
+Stress testing projects should start with the development of a model for user workload that an application receives. This should take into consideration various performance aspects of the application and the infrastructure that a given workload will impact. A workload is a key component of such a model \cite{Molyneaux2009}.
+
+The term workload represents the size of the demand that will be imposed on the application under test in an execution. The metric  used for measure a workload is dependent on the application domain, such as the length of the video in a transcoding application for multimedia files or the size of the input files in a file compression application \cite{Feitelson2013} \cite{Molyneaux2009} \cite{Goncalves2014}. 
+
+Workload is also defined by the load distribution between the identified transactions at a given time. Workload helps researchers study the system behavior identified in several load models. A workload model can be designed to verify the predictability, repeatability, and scalability of a system \cite{Feitelson2013} \cite{Molyneaux2009}.
+
+
+Workload modeling is the attempt to create a simple and generic model that can then be used to generate synthetic workloads. The goal is typically to be able to create workloads that can be used in performance evaluation studies. Sometimes, the synthetic workload is supposed to be similar to those that occur in practice in real systems \cite{Feitelson2013} \cite{Molyneaux2009}.
+
+There are two kinds of workload models: descriptive and generative. The main difference between the two is that descriptive models just try to mimic the phenomena observed in the workload, whereas generative models try to emulate the process that generated the workload in the first place \cite{DiLucca2006}. 
+
+In descriptive models, one finds different levels of abstraction on the one hand and different levels of fidelity to the original data on the other hand. The most strictly faithful models try to mimic the data directly using the statistical distribution of the data. The most common strategy used in descriptive modeling is to create a statistical model of an observed workload (Fig. \ref{fig:descriptivemodel}). This model is applied to all the workload attributes, e.g., computation, memory usage, I/O behavior, communication, etc. \cite{DiLucca2006}. Fig. \ref{fig:descriptivemodel} shows a simplified workflow of a descriptive model. The workflow has six phases. In the first phase, the user uses the system in the production environment. In the second phase, the tester collects the user's data, such as logs, clicks, and preferences, from the system. The third phase consists in developing a model designed to emulate the user's behavior. The fourth phase is made up of the execution of the test, emulation of the user's behavior, and log gathering.
+
+
+
+\begin{figure}[!ht]
+
+\centering
+\includegraphics[width=0.6\textwidth]{./images/workloadmodel1300dpi.png}
+\caption{Workload modeling based on statistical data \cite{DiLucca2006}}
+\label{fig:descriptivemodel}
+\end{figure}
+
+
+Generative models are indirect in the sense that they do not model the statistical distributions. Instead, they describe how users will behave when they generate the workload. An important benefit of the generative approach is that it facilitates manipulations of the workload. It is often desirable to be able to change the workload conditions as part of the evaluation. Descriptive models do not offer any option regarding how to do so. With the generative models, however, we can modify the workload-generation process to fit the desired conditions \cite{DiLucca2006}. The difference between the workflows of the descriptive and the generative models is that user behavior is not collected from logs, but simulated from a model that can receive feedback from the test execution (Fig. \ref{fig:generativemodel}).
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{./images/workloadmodel2300dpi.png}
+\caption{Workload modeling based on the generative model \cite{DiLucca2006}}
+\label{fig:generativemodel}
+
+\end{figure}
+
+Both load model have their advantages and disadvantages. In general, loads resulting from realistic-load based design techniques (Descriptive models) can be used to detect both functional and non-functional problems. However, the test durations are usually longer and the test analysis is more difficult. Loads resulting from fault-inducing load design techniques (Generative models) take less time to uncover potential functional and non-functional problems, the resulting loads usually only cover a small portion of the testing objectives \cite{Jiang2010}. The presented research work uses a generative model.
+
+
+There are  several approaches to design generative or descriptive workloads:
+
+\begin{itemize}
+\item Model-based Stress testing: a usage model is proposed to simulate users’ behaviors.
+\item Feedback-Directed Learning Software Testing: is an adaptive, feedback-directed learning testing system that learns rules from system execution \cite{Luo2015} \cite{Wert2014}.
+\item Search-based Stress testing. 
+\end{itemize}
+
+
+\subsection{Model-based Stress Testing}
+
+Model-based testing is an application  of models to represent the desired behavior of a System Under Test or to represent testing strategies in a test. Some research aproaches proposes models to simulate or  generate realistic loads. Model-based testing (MBT) is a variant of testing that relies on explicit behaviour models that encode the intended behaviours of a system under test. Test cases are generated from one of these models or their combination \cite{MarkUtting2012} \cite{Bertolino2008}. 
+
+The model paradgim is what paradigm and notation are used to describe the model. There are many different modelling notations that have been used for modelling the behaviour of systems for test generation purposes \cite{MarkUtting2012} \cite{Hierons2009}. 
+
+\begin{itemize}
+\item State-Based (or Pre/Post) Notations. These model a system as a collection of variables, which represent a snapshot of the internal state of the system, plus some operations that modify those variables. Each operation is usually defined by a precondition and a postcondition, or the postcondition may be written as explicit code that updates the state \cite{MarkUtting2012}.
+\item Transition-based Notations. These focus on describing the transitions between different states
+of the system. Typically, they are graphical node-and-arc notations, like finite state machines
+(FSMs). Examples of transition-based notations used for MBT include FSMs themselves, statecharts, labelled transition systems and I/O automata \cite{MarkUtting2012}.
+\item History-based Notations. These notations model a system by describing the allowable traces
+of its behaviour over time. Message-sequence charts and related formalisms are also included in this group. These are
+graphical and textual notations for specifying sequences of interactions between components \cite{MarkUtting2012}.
+\item Functional Notations. These describe a system as a collection of mathematical functions. The
+functions may be first-order only, as in the case of algebraic specifications, or higher-order, as in
+notations like HOL \cite{MarkUtting2012}.
+\item Operational Notations. These describe a system as a collection of executable processes,
+executing in parallel. They are particularly suited to describing distributed systems and
+communications protocols. Examples include process algebras such as CSP or CCS as well as
+Petri net notations. Slightly stretching this category, hardware description languages like VHDL
+or Verilog are also included in this category \cite{MarkUtting2012}.
+\item Stochastic Notations. These describe a system by a probabilistic model of the events and input
+values and tend to be used to model environments rather than SUTs. For example, Markov chains
+are used to model expected usage profiles, so that the generated tests scenarios \cite{MarkUtting2012}.
+\item Data-Flow Notations. These notations concentrate on the data rather than the control flow.
+Prominent examples are Lustre, and the block diagrams of Matlab Simulink, which are often used
+to model continuous systems \cite{MarkUtting2012}.
+\end{itemize}
+
+A User Community Modeling Language (UCML) is a set of symbols that can be used to create visual system usage models and depict associated parameters \cite{Wang2013}. The Fig. \ref{fig:ucml} shows a sample where all users realize a login into the application unde test. Once logged in, 40\% of the users navigates on the aplication, 30\%  of the users realizes downloads. 20\% of users realizes uploads and 10\% of users performs deletions.
+
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1\textwidth]{./images/ucml.png}
+\caption{User community modeling language \cite{Wang2013}}
+\label{fig:ucml}
+
+\end{figure}
+
+Another technique to create workload models it is Stochastic Formcharts. The work of Draheim and Weber’s Formoriented analysis is a methodology for the specification of ultra-thin client based systems. Form-oriented models describe a web application as a bipartite state machine which consists of pages, actions, and transitions between them. Stochastic Formcharts are the combination of formoriented model and probability features. The Fig. \ref{fig:stform} shows a sample where all users have a probability of 100\% of realize a login into the application under test. Once logged in, users have a probability of 40\% of navigate on the application and so on \cite{Draheim2006b}.
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{./images/stochastic.png}
+\caption{Stochastic Formcharts Example \cite{Draheim2006b} \cite{Wang2013}}
+\label{fig:stform}
+\end{figure}
+
+One way to capture the navigational pattern within a session is through the Customer Behavior Model Graph (CBMG). Figure \ref{fig:cbmg} depicts an example of a CBMG showing that customers may be in several different states—Home, Browse, Search, Select, Add, and Pay—and they may transition between these states as indicated by the arcs connecting them. The numbers on the arcs represent transition probabilities. A state not explicitly represented in the figure is the Exit state \cite{Menasce2002a} \cite{Jiang2010} \cite{MohammadS.Obaidat}. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{./images/cbmg.png}
+\caption{Example of a Customer Behavior Model Graph (CBMG)  \cite{Menasce2002a} \cite{Jiang2010} \cite{MohammadS.Obaidat}}
+\label{fig:cbmg}
+\end{figure}
+
+Garousi et al. proposes derivate Stress Test Requirements from an UML model. The input model consists of a number of UML diagrams. Some of
+them are standard in mainstream development methodologies and others are needed to describe the distributed architecture of the system under test (Fig. \ref{fig:modelbased}).
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\textwidth]{./images/modelmethodology.png}
+\caption{Model-based stress test methodology}
+\label{fig:modelbased}
+\end{figure}
+
+Vogele et al. presents an approach that aims to automate the extraction and transformation of workload specifications for an model-based performance prediction of session-based application systems.  The research also presents transformations to the common load testing tool Apache JMeter and to the Palladio Component Model \cite{Vogele2016}. The workload specification formalism (Workload Model) consists of the following components, which are detailed below and illustrated in Fig. \ref{fig:vogel}:
+\begin{itemize}\item An Application Model, specifying allowed sequences of service invocations and SUT-specific details for generating valid requests.\item A set of Behavior Models,each providing a probabilistic representation of user sessions in terms of invoked services.\item A Behavior Mix, specified as probabilities for the individual Behavior Models to occur during workload gen- eration.\item A Workload Intensity that includes a function which specifies the number of concurrent users during the workload generation execution.
+\end{itemize}
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{./images/vogel.png}
+\caption{Exemplary workload model}
+\label{fig:vogel}
+\end{figure}
+
+
+\subsection{Feedback-Directed Learning Software Testing}
+
+Feedback-ORiEnted PerfOrmance Software Testing (FOREPOST) is an adaptive, feedback-directed learning testing system that learns rules from system execution traces and uses these learned rules to select test input data automatically to find more performance problems in applications when compared to exploratory random performance testing \cite{Grechanik2012}.
+
+FOREPOST uses runtime monitoring for a short duration of testing together with machine learning techniques and automated test scripts to reduce large amounts of performance-related information collected during AUT runs to a small number of descriptive rules that provide insights into properties of test input data that lead to increased computational loads of applications.
+
+The Fig. \ref{fig:forepost} presents the main workflow of FOREPOST solution. The first step,  The Test Script is written  by the test engineer(1). Once the test script starts, its execution traces are collected (2) by the Profiler, and these traces are forwarded to the Execution Trace Analyzer, which produces (3) the Trace Statistics. The trace statistics is supplied (4) to Trace Clustering, which uses an ML algorithm, JRip to perform unsupervised clustering of these traces into two groups that correspond to (6) Good and (5) Bad test traces. 
+
+The user can review the results of clustering (7). These clustered traces are supplied (8) to the Learner that uses them to learn the classification model and (9) output rules. The user can review (10) these rules and mark some of them as erroneous if the user has sufficient evidence to do so. Then the rules are supplied (11) to the Test Script. Finally, the input space is partitioned into clusters that lead to good and bad test cases, to find methods that are specific to good performance test cases. This task is accomplished in parallel to computing rules, and it starts when the Trace Analyzer produces (12) the method and data statistics that is used to construct (13) two matrices (14). Once these matrices are constructed, ICA decomposes them (15) into the matrices for bad and good test cases correspondingly. Finally, the Advisor (16) determines top methods that performance testers should look at (17) to debug possible performance problems.
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{./images/FOREPOST.png}
+\caption{The architecture and workflow of FOREPOST}
+\label{fig:forepost}
+\end{figure}
+
+
+
+
+\subsection{Search-Based Stress Testing}
+
+Search-Based Testing is the process of automatically
+generating test according to a test adequacy criterion,encoded as a fitness function, using search-based optimization algorithms, which are guided by a fitness function. The role of the fitness function is to capture a test objective that, when achieved, makes a contribution to the desired test adequacy criterion \cite{Harman2010}. 
+
+Search–Based Testing uses metaheuristic algorithms to
+automate the generation of test inputs that meet a test
+adequacy criterion. Many algorithms have been considered in the past, including Simulated Annealing, Parallel Evolutionary Algorithms \cite{Alba2008},Evolution Strategies, Estimation of Distribution Algorithms , Scatter Search , Particle Swarm Optimization , Tabu Search and the Alternating Variable Method. An advantage of meta-heuristic algorithms is that they
+are widely applicable to problems that are infeasible for analytic approaches. All one has to do is come up with a representation for candidate solutions and an objective function to evaluate those solution \cite{Baars2011}. 
+
+The application of metaheuristic search techniques to test case generation is a possibility which offers much benefits. Metaheuristic search techniques are high-level frameworks which utilise heuristics in order to find solutions to combinatorial problems at a reasonable computational cost. Such a problem may have been classified as NP-complete or NP-hard, or be a problem for which a polynomial time algorithm is known to exist but is not practical \cite{McMinn2004}.
+
+One of the most popular search techniques used in SBST belong to the family of Evolutionary Algorithms in what is known as Evolutionary Testing. Evolutionary Algorithms represent a class of adaptive search techniques based on natural genetics and Darwin’s theory of evolution. They are characterized by an iterative procedure that works in parallel on a number of potential solutions to a problem. Figure \ref{fig:evocycle}  shows the cycle
+of an Evolutionary Algorithm when used in the context of
+Evolutionary Testing \cite{Baars2011}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{./images/evolutionary.png}
+\caption{Evolutionary Algorithm Search Based Test Cycle\cite{Baars2011}. }
+\label{fig:evocycle}
+\end{figure}
+
+First, a population of possible solutions to a problem
+is created, usually at random. Starting with randomly
+generated individuals results in a spread of solutions ranging in fitness because they are scattered around the search–space. Next, each individual in the population is evaluated by calculating its fitness via a fitness function. The principle idea of an Evolutionary Algorithm is that fit individuals survive over time and form even fitter individuals in future
+generations. Selected individuals are then recombined
+via a crossover operator. After crossover, the resulting offspring individuals may be subjected to a mutation operator. The algorithm iterates until a global optimum is reached or another stopping condition is fulfilled \cite{Baars2011}. 
+
+The fitness evaluation is the most
+time consuming task of SBST. However, for time consuming functional testing of complex industrial systems, minimizing
+the number of generated individuals may also be highly desirable. This might be done using an assumption about
+the "potential" of individuals in order to predict which individuals are likely to contribute to any future improvement.
+This prediction could be achieved by using information about similar individuals that have been executed in earlier generations.
+
+
+
+\subsubsection{Non-functional Search-Based Testing}
+
+SBST has made many achievements, and demonstrated its wide applicability and increasing uptake. Nevertheless, there are pressing open problems and challenges that need more attention like to extend SBST to test non-functional properties, a topic that remains relatively under-explored, compared to structural testing. There are many kinds of non-functional search based tests  \cite{Afzal2009a}:
+
+\begin{itemize}
+\item Execution time: The application of evolutionary algorithms to find the best and worst case execution times (BCET, WCET).
+\item Quality of service: uses metaheuristic search techniques to search violations of service level agreements (SLAs).
+\item Security: apply a variety of metaheuristic search techniques  to detect security vulnerabilities like detecting buffer overflows.
+\item Usability: concerned with construction of covering array which is a combinatorial object.
+\item Safety: Safety testing is an important component of the testing strategy of safety critical systems where the systems are required to meet safety constraints.
+\end{itemize}
+
+A variety of metaheuristic search techniques are found to be applicable for non-functional testing including simulated annealing, tabu search, genetic algorithms, ant colony methods, grammatical evolution, genetic programming and swarm intelligence methods. The Fig. \ref{fig:metabykind} shows a comparison between the range of metaheuristcs and the type of non-functional search based test.The Data comes from Afzal et al. \cite{Afzal2009a}. Afzal's work adds to some of the latest research in this area (\cite{Garousi2006} \cite{Garousi2010} \cite{DiAlesio2013} \cite{DiAlesio2014} \cite{Alesio2015} \cite{Gois2016}). 
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{./images/metaheuristics.png}
+\caption{Range of metaheuristics by Type of non-functional Search Based Test\cite{Afzal2009a}. }
+\label{fig:metabykind}
+\end{figure}
+
+
+
+
+
+
+The search for the longest execution time is regarded as a discontinuous, nonlinear, optimization problem, with the input domain of the system under test as a search space \cite{Sullivan}.  The application of SBST algorithms to  stress tests involves finding the best- and worst-case execution times (B/WCET) to determine whether timing constraints are fulfilled \cite{Afzal2009a}. 
+
+There are two measurement units normally associated with the fitness function in stress test: processor cycles and execution time. The processor cycle approach describes a fitness function in terms of processor cycles. The execution time approach involves executing the application under test and measuring the execution time \cite{Afzal2009a} \cite{tracey2000search}.
+
+Processor cycles measurement is deterministic in the sense that it is independent of system load and results in the same execution times for the same set of input parameters. However, such a measurement is dependent on the compiler and optimizer used, therefore, the processor cycles differ for each platform. Execution time measurement is a non deterministic approach, there is no guarantee to get the same results for the same test inputs \cite{Afzal2009a}.  However, stress testing where testers have no access to the production environment should be measured by the execution time measurement \cite{Molyneaux2009} \cite{Afzal2009a}.
+
+Table \ref{tab:comparison}  shows a comparison between the research studies on load, performance, and stress tests presented by Afzal et al. \cite{Afzal2009a}. Afzal's work adds to some of the latest research in this area (\cite{Garousi2006} \cite{Garousi2010} \cite{DiAlesio2013} \cite{DiAlesio2014} \cite{Alesio2015} \cite{Gois2016} ). The columns represent the type of tool used (prototype or functional tool), and the rows represent the metaheuristic approach used by each research study (genetic algorithm, Tabu search, simulated annealing, or a customized algorithm). The table also sorts the research studies by the type of fitness function used (execution time or processor cycles). 
+
+
+\begin{table}[h]
+\centering
+\caption{Distribution of the research studies over the range of applied metaheuristics}
+\label{tab:comparison}
+\begin{tabular}{p{2.2cm}|p{2.8cm}|p{2.8cm}|p{2.8cm}|}
+\cline{2-4}
+                                                                & \multicolumn{2}{c|}{\textbf{Prototypes}}            & \textbf{Functional Tool} \\ \cline{2-4} 
+                                                                & \begin{minipage}{0.2\textwidth}\footnotesize Execution Time  \end{minipage}          & \begin{minipage}{0.2\textwidth}\footnotesize Processor Cycles \end{minipage}        & \begin{minipage}{0.2\textwidth}\footnotesize Execution Time \end{minipage}           \\ \cline{2-4} 
+%\setlength{\extrarowheight}{20pt}
+\begin{tabular}[c]{@{}l@{}}\begin{minipage}{0.1\textwidth}\scriptsize GA + SA  \\ + Tabu \\ Search \end{minipage}\end{tabular}  & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.2\textwidth} \tiny Gois et al. 2016 \cite{Gois2016}  \end{minipage}  \\[2ex] \cline{2-4} 
+\begin{minipage}{0.1\textwidth}\scriptsize GA \end{minipage}                                                              & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny \textnormal{ \\  Alander et al.,1998 \cite{Alander} \\ Wegener et al., 1996 and 1997 \cite{Wegener1997}\cite{J.WegenerK.GrimmM.GrochtmannH.Sthamer1996} \\  Sullivan et al., 1998 \cite{Sullivan} \\ Briand et al., 2005 \cite{Briand2005} \\ Canfora et al., 2005 \cite{Canfora}  \\ }\end{minipage} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth} \tiny \textrm{  \\ Wegener and Grochtmann, 1998 \cite{Wegener1998} \\  Mueller et al., 1998 \cite{Mueller1998} \\ Puschner et al. \cite{Puschner1998} \\ Wegener et al., 2000 \cite{Stations} \\ Gro et al., 2000 \cite{Gross2000}  \\ }\end{minipage}& \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny \textnormal{ \\  Di Penta, 2007 \cite{Penta2007} \\ Garoussi, 2006 \cite{Garousi2006} \\ Garousi, 2008 \cite{Garousi2008} \\ Garousi, 2010 \cite{Garousi2010} \\ } \end{minipage} \\[2ex] \cline{2-4} 
+\begin{minipage}{0.1\textwidth}\scriptsize Simulated \\ Annealing \\ (SA) \end{minipage}                                                             & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny  Tracey, 1998 \cite{Tracey1998} \end{minipage} \\[2ex] \cline{2-4}
+\begin{minipage}{0.1\textwidth}\scriptsize  Constraint \\ Programming \end{minipage}                                                             & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny  Alesio, 2014 \cite{DiAlesio2014} \\ Alesio, 2013 \cite{DiAlesio2013}  \end{minipage} \\[2ex] \cline{2-4} 
+\begin{minipage}{0.1\textwidth}\scriptsize  GA +\\ Constraint \\ Programming \end{minipage}                                                             & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF} \begin{minipage}{0.12\textwidth}   \tiny  Alesio, 2015 \cite{Alesio2015} \end{minipage} \\[2ex] \cline{2-4} 
+\setlength{\extrarowheight}{20pt}
+\begin{tabular}[c]{@{}l@{}}
+\begin{minipage}{0.1\textwidth}\scriptsize Customized \\ Algorithm \end{minipage}\end{tabular} & \cellcolor[HTML]{FFFFFF} & \cellcolor[HTML]{FFFFFF}  \begin{minipage}{0.12\textwidth}   \tiny  \textnormal{   \raggedleft Pohlheim, 1999 \cite{Pohlheim2005}  } \end{minipage} & \cellcolor[HTML]{FFFFFF} \\[4ex] \cline{2-4}
+\end{tabular}
+\end{table}
+
+The studies can be grouped into two main groups:
+
+\begin{itemize}
+\item Search-Based Stress Tesing on Safety-critical systems.
+\item Search-Based Stress Testing on Industrial systems.
+\end{itemize}
+
+
+\subsubsection{Search-Based Stress Tesing on Safety-critical systems}
+
+Domains such as avionics, automotive and aerospace feature safety-critical systems, whose failure could result in catastrophic consequences.  The importance
+of software in such systems is permanently increasing due to the need of a higher system
+flexibility. For this reason, software components of these systems are usually subject to safety certification. In this context, software safety certification has to take into account performance requirements specifying constraints on how the system should react to its environment, and how it should execute on its hardware platform \cite{DiAlesio2013}.
+
+Usually, embedded computer systems have to fulfil real-time requirements. A faultless function of the systems does not depend only on their logical correctness but also on their temporal correctness. Dynamic aspects like the duration of computations, the memory actually needed during program execution, orthe synchronisation of parallel processes are of major importance for the correct function of real-time systems  \cite{J.WegenerK.GrimmM.GrochtmannH.Sthamer1996} .
+
+The concurrent nature of embedded software makes  the order of external events triggering the systems tasks is often unpredictable. Such increasing software complexity
+renders performance analysis and testing increasingly
+challenging. This aspect is reflected by the fact that most existing testing approaches target system functionality rather than performance \cite{DiAlesio2013}.
+
+Reactive real-time systems must react to external events within time constraints. Triggered tasks must execute within deadlines. Shousha develops a methodology for the derivation of test cases that aims at maximizing the chance of critical deadline misses \cite{shousha2003performance}. 
+
+The main goal of Search-Based Stress testing of Safety-critical systems it is finding a combination of inputs that causes the system to delay task completion to the greast extent possible \cite{shousha2003performance}. The followed approaches uses metaheuristics to discover the worst-case execution times. 
+
+Wegener et al. \cite{Wegener1997} used genetic algorithms(GA) to search for input situations that produce very long or very short execution times. The fitness function used was the execution time of an individual measured in micro seconds \cite{Wegener1997}. Alander et al. \cite{Alander} performed experiments in a simulator environment to measure response time extremes of protection relay software using genetic algorithms. The fitness function used was the response time of the tested software. The results showed that GA generated more input cases with longer response times \cite{Alander}. 
+
+Wegener and Grochtmann performed a  experimentation
+to compare GA with random testing. The fitness function used was duration of execution measured in processor cycles.  The results showed that, with a large number of input parameters, GA obtained more extreme execution times with less or equal testing effort than random testing \cite{J.WegenerK.GrimmM.GrochtmannH.Sthamer1996} \cite{Wegener1998}.
+
+
+Gro et. al. \cite{Gross2000} presented a prediction model  which can be used to predict evolutionary testability. The research confirmed that there is a relationship between the complexity of a test object and the ability of a search algorithm to produce input parameters according to B/WCET \cite{Gross2000}. 
+
+Briand et al. \cite{Briand2005} used GA to find the sequence of arrival times of events for aperiodic tasks, which will cause the greatest delays in the execution of the target task. A prototype tool named real-time test tool (RTTT) was developed to facilitate the execution of runs of genetic algorithm. Two case studies were conducted and results illustrated that RTTT was a useful tool to stress a system under test \cite{Briand2005}.
+
+
+Pohlheim and Wegener used an extension of genetic algorithms with multiple sub-populations, each using a different search strategy. The duration of execution measured in processor cycles was taken as the fitness
+function. The GA found longer execution times for all the given modules in comparison with systematic testing\cite{Pohlheim2005}.
+
+Garousi presented a stress test methodology aimed at increasing chances of discovering faults related to distributed traffic in distributed systems. The technique uses as input a specified UML 2.0 model of a system, augmented with timing information.The results indicate that the technique is significantly more effective at detecting distributed traffic-related faults when compared to standard test cases based on an operational profile \cite{Garousi2006}.
+
+Alesio, Nejati and Briand describe a approach based
+on Constraint Programming (CP) to automate the generation of test cases that reveal, or are likely to, task deadline misses. They evaluate it through a comparison with a state-of-the-art approach based on Genetic Algorithms (GA). In particular, wthe study compares CP and GA in five case studies for efficiency, effectiveness, and scalability. The experimental results show that, on the largest and more complex case studies, CP performs significantly better than GA. The research proposes a tool-supported, efficient and effective approach based on CP to generate stress test cases that maximize the likelihood of task deadline misses \cite{DiAlesio2013}.
+
+Alesio describe stress test case generation as a search problem over the space of task arrival times. The research search for worst case scenarios maximizing deadline misses where each scenario characterizes a test case. The paper combine two strategies, GA and Constraint Programming (CP). The results show that, in comparison with GA and CP in isolation, GA+CP achieves nearly the same effectiveness as CP and the same efficiency and solution diversity as GA, thus combining the advantages of the two strategies. Alesio concludes that a combined GA+CP approach to stress testing is more likely to scale to large and complex systems \cite{Alesio2015}.
+
+\subsubsection{Search-Based Stress Testing on Industrial systems} 
+
+Usually, the application of Search-Based Stress Testing on non safety-critical systems deals with the generation of test cases that causes Service Level Agreements violations.
+
+
+Tracey et al. \cite{Tracey1998} used simulated annealing (SA) to test four
+simple programs. The results of the research presented that the use of SA was more effective with larger parameter space. The authors highlighted the need of a detailed comparison of various optimization techniques to explore WCET and BCET of the of the system under test \cite{Tracey1998}.
+
+Di Penta et al. \cite{Penta2007} used GA to create test data that violated QoS constraints causing SLA violations. The generated test data included combinations of inputs. The approach was applied to two case studies. The first case study was an audio processing workflow. The second case study, a service producing charts, applied the black-box approach with fitness calculated only on the basis of how close solutions violate QoS constraint. The genome representation is presented in Fig \ref{fig:dipenta}. The representation models a wsdl request to a webservice.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{./images/dipenta.png}
+\caption{Genome representation \cite{Penta2007}. }
+\label{fig:dipenta}
+\end{figure}
+
+
+
+In case of audio workflow, the GA outperformed random search. For the second case study, use of black-box approach successfully violated the response time constraint, showing the violation of QoS constraints for a real service available on the Internet \cite{Penta2007}.
+
+
+Gois et al. proposes an hybrid metaheuristic approach using genetic algorithms, simulated annealing, and tabu search algorithms to perform stress testing. A tool named IAdapter, a JMeter plugin used for performing search-based stress tests, was developed. Two experiments were performed to validate the solution. In the first experiment, the signed-rank Wilcoxon non- parametrical procedure was used for comparing the results. The significant level adopted was 0.05. The procedure showed that there was a significant improvement in the results with the Hybrid Metaheuristic approach.In the second experiment, the whole process of stress and performance tests, which took 3 days and about 1800 executions, was carried out without the need for monitoring by a test designer. The tool automatically selected the next scenarios to be run up to the limit of six generations previously established \cite{Gois2016}. 
+
+
+
+\section{Research Question 2: How is a stress test executed and automated?}
+
+
+The stress test execution  consists of deploy the system  and steup test execution ; generating the workloads according to the configurations and terminating the load when the load test is completed and recording the system behavior. There are three general approaches of load test executions \cite{Molyneaux2009}\cite{Jiang2010}:
+
+\begin{itemize}
+\item Live-User Based Executions: The test examines a system’s behavior when the system is simultaneously used by many users or execute a load test by employing a group of human testers. 
+\item Driver Based Executions: The driver based execution approach automatically generate thousands or millions of concurrent requests for a long period of time using a software tool.
+\item Emulation Based Executions: The emulation based load test execution approach performs the load testing on special platforms and doesn't require a fully functional system and conduct load testing.
+\end{itemize}
+
+Usually, a stress test execution it is performed with Driver Based Executions approach \cite{Erinle2013} \cite{MohammadS.Obaidat} \cite{Wang2013}. There are three categories of load drivers \cite{Jiang2010}: 
+
+\begin{itemize}
+\item Benchmark Suite: specialized load driver, designed for one type of system. For example, LoadGen is a load driver specified used to load test the Microsoft Exchange MailServer.
+\item  Centralized Load Drivers: refer to a single load driver, which generates the load.
+\item Peer-to-peer Load Drivers: refer to a set of load drivers, which collectively generate the target testing load. Peer-to-peer load drivers usually have a con- troller component, which coordinates the load generation among the peer load drivers. 
+\end{itemize}
+
+
+\subsection{Load Test Tools}
+
+A stress test need to perform hundreds or thousands of concurrent requests  to the application under test. Automated tools are needed to carry out serious load, stress, and performance testing. Sometimes, there is simply no practical way to provide reliable, repeatable performance tests without using some form of automation. The aim of any automated test tool is to simplify the testing process. 
+
+Workload generators are software products based on workload models to generate request sequences similar to real requests. They are designed and implemented as versatile software tools for performing tuning or capacity planning studies. Workload generators typically have the following components \cite{Molyneaux2009}:
+
+\begin{itemize}
+\item Scripting module: Enable recording of end-user activities in different middleware protocols;
+\item Test management module: Allows the creation of test scenarios;
+\item Load injectors: Generate the load with multiple workstations or servers;
+\item Analysis module: Provides the ability to analyse the data collected by each test interation.
+\end{itemize}
+
+
+There are several tool to execution of Stress testing. In this tools, the procedure is semi-automated, whereas the execution of the tests itself is performed by a tool, the choice of scenarios to be executed as well as the decision to start new execution batteries are activities of the test designer or tester.
+
+Normally, load test tools uses test scripts. Test scripts are written in a GUI testing framework or a backend server-directed performance tool such as JMeter. These frameworks are the basis on which performance testing is mostly done in industry. Performance test scripts imitate large numbers of users to create a significant load on the application under tests \cite{Grechanik2012}.
+
+Performance testing tools, such as Rational’s PerformanceStudio, allow for load testing, where the tool can be programmed to run a number of client machines simultaneously to load the client/server system and measure response time. Load testing typically involves various scenarios to analyze how the client/server system responds under various loads \cite{Dustin1999}. 
+
+Comparing Web workload generators is a laborious and difficult task since they offer a large amount and diversity of features. In this section we contrast generators according to a wide set of features and capabilities, focusing on their ability to realize search-based tests or have learning capacities.
+
+WebStone was designed by Silicon Graphics in 1996 to measure the perfor- mance of Web server software and hardware products. Nowadays, both executable and source actualized code for WebStone are available for free. The benchmark generates a Web server load by simulating multiple Web clients navigating a website. All the testing done by the benchmark is controlled by a Webmaster, which is a program that can be run on one of the client computers or on a different one \cite{MohammadS.Obaidat} \cite{Trent1995} . 
+
+TPC Benchmarkt (TPC-W) is a transactional Web benchmark defined by the Transaction Processing Performance Council that models a representative e-commerce evaluating the architecture performance on a generic profile.The models uses a remote browser emulator to generate requests to server under test. TPC-W adopts the CBMG model to define the workloads in spite of this model only characterizing user dynamic behavior partially. The remote browser emulators are located in the client side and generate workload towards the e-commerce Web application, which is located in the server side (e-commerce server) \cite{MohammadS.Obaidat} \cite{Menasce2002a}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{./images/tpcw.png}
+\caption{TPC-W architecture \cite{MohammadS.Obaidat} \cite{Menasce2002a}}
+\label{fig:tpcw}
+\end{figure}
+
+
+Open STA is an open source software developed in C++, and released under the GPL licence. OpenSTA provides a script language which permits to simulate the activity of a user. This language can describe HTTP/S scenario and all the test executions is managed in a graphical interface. The composition of the test is
+very simple, allowing the tester choose scripts for a test and a remote computer that will execute each test.
+
+
+LoadRunner is one of the most popular industry-standard software products for functional and performance testing. It was originally developed by Mercury Interactive, but nowadays it is commercialized by Hewlett-Packard. LoadRunner supports the definition of user navigations, which are represented using a scripting language. The basic steps are recorded, creating a shell script. Next, this script is then taken off-line, and undergoes further manual steps such as data parameterization and correlations. Finally, the desired performance scripts are obtained after adding transactions and any other required logic (Fig. \ref{fig:loadrunner}). LoadRunner scripting only permits partial reproduction of user dynamism when generating Web workload, because it cannot define either advanced interactions of users, such as parallel browsing behavior, or continuous changes in user’s behaviors \cite{MohammadS.Obaidat}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1\textwidth]{./images/loadrunner.png}
+\caption{Load Runner Scripting}
+\label{fig:loadrunner}
+\end{figure}
+
+
+
+WebLOAD is a software tool for Web performance commercialized by RadView. It is oriented to explore the performance of critical Web applications by quantifying the utilization of the main server resources. The tool creates scenarios that try to mimic the navigations of real users. To this end, it provides facilities to record, edit and debug test scripts, which are used to define the scenarios on workload characterization. The execution environment is a console to manage test execution, whose results are analyzed in the Analytics application. Since WebLOAD is a distributed system, it is possible to deploy several load generators to reproduce the desired load. Load generators can also be used as probing clients where a single virtual user is simulated to evaluate specific statistics of a single user. These probing clients resemble the experience of a real user using the system while it is under load \cite{MohammadS.Obaidat}.
+
+Apache JMeter is a free open source stress testing tool.  It has a large user base and offers lots of plugins to aid testing. JMeter is a desktop application designed to test and measure the performance and functional behavior of applications. The application it's purely Java-based and is highly extensible through a provided API (Application Programming Interface). JMeter works by acting as the client of a client/server application. JMeter allows multiple concurrent users to be simulated on the application \cite{Halili2008} \cite{Erinle2013}. 
+
+JMeter has components organized  in a hierarchical manner. The Test Plan is the main component in a JMeter script. A typical test plan will consist of one or more Thread Groups, logic controllers, listeners, timers, assertions, and configuration elements:
+
+\begin{itemize}\item Thread Group: Test management module responsible to simulate the users used in a test. All elements of a test plan must be under a thread group.\item Listeners: Analysis module responsible to provide access to the information gathered by JMeter about the test cases .\item Samplers: Load injectors module responsible to send requests to a server, while Logical Controllers let you customize its logic.\item Timers: allow JMeter to delay between each request.\item Assertions: test if the application under test it is returning the correct results.\item Configuration Elements: configure detais about the request protocol and test elements.
+\end{itemize}
+
+
+Table \ref{tab:loadtool} summarizes the studied workloads generators as well as the grade (full or partial) in which they fulfill the features described bellow. None of the presented tools uses heuristic or learning resources when choosing the scenarios to be tested or the workloads to be applied in the test.
+
+\section{Research Question 3: What are the main problems found by stress tests?}
+
+ Performance problems share common symptoms and many performance problems described in the literature are defined by a particular set of root causes. Fig. \ref{fig:symptoms}  shows the symptoms of known performance problems \cite{Wert2013a}. 
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{./images/symptoms.png}
+\caption{Symptoms of know performance problems \cite{Wert2013a}. }
+\label{fig:symptoms}
+\end{figure}
+
+
+There are several antipatterns that details features about  common performance problems. Antipatterns are conceptually similar to patterns in that they document recurring solutions to common design problems. They are known as
+antipatterns because their use produces negative consequences.  Performance antipatterns document common performance mistakes made in software architectures or designs. These software Performance antipatterns have four primary uses: identifying problems,
+focusing on the
+right level of abstraction,
+effectively communicating
+their causes to others, and prescribing solutions \cite{brown1998antipatterns}. The table \ref{antipatterns} present some of the most common performance antipatterns.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\caption{Performance antipatterns}
+\label{antipatterns}
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}\textbf{antipattern}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{Derivations}} \\ \hline
+Blob or The God Class &  \\ \hline
+ & Concurrent processing Systems \\ \cline{2-2} 
+ & Piper and Filter Architectures \\ \cline{2-2} 
+\multirow{-3}{*}{Unbalanced-Processing} & Extensive Processing \\ \hline
+Circuitous Treasure Hunt &  \\ \cline{1-1}
+Empty Semi Trucks &  \\ \cline{1-1}
+Tower of Babel &  \\ \cline{1-1}
+One-Lane Bridge &  \\ \cline{1-1}
+Excessive Dynamic Allocation &  \\ \cline{1-1}
+Traffic Jam &  \\ \cline{1-1}
+The Ramp  &  \\ \cline{1-1}
+More is Less & \multirow{-10}{*}{} \\ \hline
+\end{tabular}
+\end{table}
+
+Blob antipattern is known by various names, including the “god” class [8] and the “blob” [2]. Blob is an antipattern whose problem is on the excessive message traffic generated by a single class or component, a particular resource does the majority of the work in a software. The Blob antipattern occurs when a single class or component either performs all of the work of an application or holds all of the application’s data. Either manifestation results in excessive message traffic that can degrade performance \cite{Cortellessa2007} \cite{Smith2000}.
+
+A project containing a “god” class is usually has a single, complex controller class that is surrounded by simple classes that serve only as data containers. These classes typically contain only accessor operations (operations to get() and set() the data) and perform little or no computation of their own \cite{Smith2000}.
+The  Figures \ref{fig:godclass} and \ref{fig:godclass2} describes an hypotetical system with a BLOB problem:
+The Fig. \ref{fig:godclass} presents a sample where the Blob class uses the features A,B,C,D,E,F and G of the hypotetical system; The Fig. \ref{fig:godclass2}  shows a static view where  a complex software entity instance, i.e. Sd, is connected to other software instances, e.g. Sa, Sb and Sc, through many dependencies \cite{Vetoio2011}\cite{Wert2013a}.
+
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{./images/BLOB.png}
+\caption{The God class\cite{Wert2013a}. }
+\label{fig:godclass}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{./images/blob2.png}
+\caption{The God class\cite{Vetoio2011}. }
+\label{fig:godclass2}
+\end{figure}
+
+Unbalanced Processing it's characterises for one scenario where a specific class of requests generates a pattern of execution within the system that tends to overload a particular resource. In other words the overloaded resource will be executing a certain type of job very often, thus in practice damaging other classes
+of jobs that will experience very long waiting times. Unbalanced Processing occurs in three different situations. The first case that cause unbalanced processing it is when processes cannot make effective use of available processors either because processors are dedicated to other tasks or because of single-threaded code. This manifestation has available processors and we need to ensure that the software is able to use them. Fig. \ref{fig:unbalanced}  shows a sample of the Unbalanced Processing. In The Fig. \ref{fig:unbalanced}, four tasks are performed. The task D it is waiting for the task C conclusion that are submmited to a heavy processing situation. 
+
+The pipe and filter architectures  and extensive processing antipattern represents a manifestation of the unbalanced processing antipattern. The pipe and filter architectures occurs when the throughput of the overall system is determined by the slowest filter. The  Fig. \ref{fig:pipefilter} describes a software S with a Pipe and Filter Architectures problem: (a) Static View, there is a software entity instance, e.g. Sa, offering an operation (operation x) whose resource demand (computation = \$compOpx, storage = \$storOpx, bandwidth = \$bandOpx) is quite high; (b) Dynamic View, the operation opx is invoked in a service  and the throughput of the service (\$Th(S)) is lower than the required one. The extensive processing occurs when a process monopolizes a processor and prevents a set of other jobs to be executed until it finishes its computation. The Fig. \ref{fig:extpro} describes a software S with a Extensive Processing problem: (a) Static View, there is a software entity instance, e.g. Sa, offering two operations (operation x, operation y) whose resource demand is quite unbalanced, since opx has a high demand (computation = \$compOpx, storage = \$storOpx, bandwidth = \$bandOpx), whereas opy has a low demand (computation = \$compOpy, storage = \$storOpy, bandwidth = \$bandOpy); (b) Dynamic View, the operations opx and opy are alternatively invoked in a service and the response time of the service (\$RT(S)) is larger than the required one \cite{Vetoio2011}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{./images/unbalanced.png}
+\caption{Unbalanced Processing sample \cite{Wert2013a}. }
+\label{fig:unbalanced}
+\end{figure}
+
+
+\begin{figure}[h]
+\begin{minipage}{.5\textwidth}
+\centering
+\includegraphics[width=1\textwidth]{./images/pipe2.png}
+\caption{Pipe and Filter sample \cite{Vetoio2011}}
+\label{fig:pipefilter}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\centering
+\includegraphics[width=1\textwidth]{./images/extpro.png}
+\caption{Extensive Processing sample \cite{Vetoio2011}.}
+\label{fig:extpro}
+\end{minipage}
+\end{figure}
+
+
+Circuitous Treasure Hunt antipattern occurs when software retrieves data from a first componet, uses those results in a second component, retrieves data from the second component, and so on, until the last results are obtained \cite{Smith2002} \cite{Smith2003}. Circuitous Treasure Hunt 
+are typical performance antipatterns that causes unnecessarily frequent database requests. The Circuitous Treasure Hunt antipattern is a result from a bad database schema or query design. A common Circuitous Treasure Hunt design creates a data dependency between single queries. For instance, a query requires the
+result of a previous query as input. The longer the chain of
+dependencies between individual queries the more the Circuitous
+Treasure Hunt antipattern hurts performance \cite{Wert2014}. The Fig. \ref{fig:circuit}  shows a software S with a Circuitous Treasure Hunt problem: (a) Static View, there is a software entity instance e.g. Sa, retrieving information from the database; (b) Dynamic View, the software  S generates a large number of database calls by performing several queries up to the final operation \cite{Vetoio2011}.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{./images/circuit.png}
+\caption{Circuitous
+Treasure Hunt sample \cite{Vetoio2011}}
+\label{fig:circuit}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{./images/trucks.png}
+\caption{Empty Semi Trucks sample \cite{Vetoio2011}.}
+\label{fig:trucks}
+\end{figure}
+
+Empty Semi Trucks occurs when an excessive number of requests is required to perform a task. It may be due to inefficient use of available bandwidth, an inefficient interface, or both \cite{Arcelli2012}. There are a special case of Empty Semi Trucks that occurs  when many fields in a user interface must be retrieved from a
+remote system. Fig. shows a software S with a Empty Semi Trucks problem: (a) Static View, there is a software entity instance, e.g. Sa, retrieving some information from several instances (Remote Software 1, . . . , Remote Software n); (b) Dynamic View, the software instance Sa generates an excessive message traffic by sending a big amount of messages with low sizes, much lower than the network bandwidth, hence the network link might have a low utilization value \cite{Vetoio2011}.
+
+The Tower of Babel antipattern most often occurs when information is translated into an exchange format, such as XML, by the sending process then parsed and translated into an
+internal format by the receiving process. When the translation and parsing is excessive, the system spends most
+of its time doing this and relatively little doing real work \cite{Smith2003}. Fig. shows a system with a Tower of Babel problem: (a) Static View, there are some software entity instances, e.g. Sa, Sb, . . . , Sn; (b) Dynamic View, the software instances Sd performs many times the translation of format for communicating with other instances \cite{Vetoio2011}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{./images/babel2.png}
+\caption{Tower of Babel sample \cite{Vetoio2011}}
+\label{fig:babel}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{./images/onelane.png}
+\caption{One-Lane Bridge sample \cite{Vetoio2011}.}
+\label{fig:onelane}
+
+\end{figure}
+
+
+One-Lane Bridge is a antipattern that occurs when one or a few processes execute concurrently using a shared resource and other processes are waiting for use the shared resource. It frequently occurs in applications that access a database. Here, a lock ensures that only one process may update the associated portion of the database at a time. This antipatterns is common when many concurrent threads or processes are waiting for the same shared resources. These can either be passive resources (like semaphores or mutexes) or active resources (like CPU or hard disk). In the first case, we have a typical One Lane Bridge whose critical resource needs to be identified. Figure 3.10 shows a system with a One-Lane Bridge problem: (a) Static View, there is a software entity instance with a capacity of managing \$poolSize threads; (b) Dynamic View, the software instance Sc receives an excessive number of synchronous calls in a service S and the predicted response time is higher than the required \cite{Vetoio2011}.
+
+
+Using dynamic allocation, objects are created when they are first accessed and then destroyed when they are no longer needed. Excessive Dynamic Allocation, however, addresses frequent, unnecessary creation and destruction of objects of the same class. Dynamic allocation is expensive , an object created in memory must be allocated from the heap, and any initialization code for the object and the contained objects must be executed. When the object is no longer needed, necessary clean-up must be performed, and the reclaimed memory must be returned to the heap to avoid memory leaks \cite{Smith2002} \cite{Smith2003}.
+
+\begin{figure}[H]
+\begin{minipage}{.5\textwidth}
+\centering
+\includegraphics[width=1\textwidth]{./images/excessivedynamicallocation.png}
+\caption{Excessive Dynamic Allocation.}
+\label{fig:dynallocation}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\centering
+\includegraphics[width=1\textwidth]{./images/jam.png}
+\caption{Traffic Jam Response Time \cite{Vetoio2011}.}
+\label{fig:jam}
+\end{minipage}
+\end{figure}
+
+The Fig. \ref{fig:dynallocation} shows a Excessive Dynamic Allocation sample. This example is drawn from a call (an offHook event), the switch creates a Call object to manage the call. When the call is completed, the Call object is destroyed. Constructing a single Call object it is not seem as excessive. A Call is a complex object that contains several other objects that must also be created. The Excessive Dynamic Allocation occurs when  a switch receive hundreds of thousands of offHook events. In a case like this, the overhead for dynamically allocating call objects adds substantial delays to the time needed to complete a call.
+
+The Traffic Jam antipattern occurs if many concurrent threads or processes are waiting for the same  active resources (like CPU or hard disk). This antipatterns produces a large backlog in jobs waiting for service. The performance impact of the Traffic Jam is the transient behavior that produces wide variability in response time. Sometimes it is fine, but at other times, it is unacceptably long. Figure \ref{fig:jam} describes a software with a Traffic Jam problem, the monitored response time of the operation shows a wide variability in response time which persists long \cite{Vetoio2011}. 
+
+
+\begin{figure}[H]
+\begin{minipage}{.5\textwidth}
+\centering
+\includegraphics[width=0.5\textwidth]{./images/ramp.png}
+\caption{The Ramp sample \cite{Vetoio2011}.}
+\label{fig:ramp}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\centering
+\includegraphics[width=1\textwidth]{./images/moreisless.png}
+\caption{More is Less sample \cite{Vetoio2011}.}
+\label{fig:moreisless}
+\end{minipage}
+\end{figure}
+
+The Ramp it is a antipattern where the processing time increases as the system is used. The Ramp can arise in several different ways. Any situation in which the amount of processing required to satisfy a request increases over time will produce the behavior. With the Ramp antipattern, the memory consumption of the application is growing over time. The root cause is Specific Data Structures which are growing during operation or which are not properly disposed \cite{Wert2014} \cite{Smith2003}. Fig. \ref{fig:ramp} shows a system  with The Ramp problem:  (i) the monitored response time of the operation opx at time t1, i.e. \$RT(opx, t1), is much lower than the monitored response time of the operation opx at time t2, i.e. \$RT(opx, t2), with t1 < t2; (ii) the monitored throughput of the operation opx at time t1, i.e. \$Th(opx, t1), is much larger than the monitored throughput of the operation opx at time t2, i.e. \$Th(opx, t2), with t1 < t2. 
+
+More is less occurs when a system spends more time "thrashing” than accomplishing real work because there are too many processes relative to available resources. More is Less are presented when it is running too many programs overtime. This antipattern causes too much system paging and systems spend all their time servicing page faults rather than processing requests. In distributed systems, there are more causes.They include: creating too many database connections and  allowing too many internet connection. Fig. \ref{fig:moreisless} describes a system  with a More Is Less problem: There is a processing node PN1 and the monitored runtime parameters (e.g. database connections, etc.) at time t1, i.e. \$Par(PN1[p], t1), are much larger than the same parameters at time t2, i.e. \$Par(PN1[p], t2), with t1 < t2. 
+
+
+\section{Research Question 4: How are the stress tests results analysed?}
+
+The system behavior recorded during the stress test execution phase needs to be analyzed to determine if there are any load-related functional or non-functional problems \cite{Jiang2010}. 
+
+
+There can be many formats of system behavior like resource usage data or end-to-end response time, which is recorded as response time for each individual request. These types of data need to be processed before comparing against threshold values. A proper data summarization technique is needed to describe these many data instances into one number. 
+
+
+There are three types of data summarization techniques proposed in the literature. Jiang et al. use response time analysis as an example to describe the proposed data summarization techniques \cite{Jiang2010}:
+
+\begin{itemize}
+\item Maximum values;
+\item Average or Medium Vales;
+\item Percentile-values. 
+\end{itemize}
+
+
+Some researchers advocate that the 90-percentile response time is a better measurement than the average/medium response time, as the former accounts for most of the peaks, while eliminating the outliers \cite{Jiang2010}.
+
+
+\section{Conclusion}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{lllllll}
+\rowcolor[HTML]{C0C0C0} 
+\textbf{Test Design}                                                                   & \textbf{\begin{tabular}[c]{@{}l@{}}Test \\ Execution\end{tabular}}                 & \textbf{Load Driver}                                                                       & \textbf{\begin{tabular}[c]{@{}l@{}}Test Tool \\ License\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Search-Based \\ Stress Test \\ Application\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Search-Based \\ Test \\ Metaheuris.\end{tabular}}         & \textbf{\begin{tabular}[c]{@{}l@{}}Test \\ Results\end{tabular}}                  \\
+\begin{tabular}[c]{@{}l@{}}Model-Based\\ Testing\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Live-User\\ Based\end{tabular}                          & \begin{tabular}[c]{@{}l@{}}Benchmark\\ Suite\end{tabular}                                  & Comercial                                                             & Real-Time                                                                                   & \cellcolor[HTML]{9AFF99}\begin{tabular}[c]{@{}l@{}}Genetic \\ Algorithms\\ (GA)\end{tabular} & Average                                                                           \\
+FOREPOST                                                                               & \cellcolor[HTML]{9AFF99}\begin{tabular}[c]{@{}l@{}}Driver-\\ Based\end{tabular}    & \begin{tabular}[c]{@{}l@{}}Centralized \\ L. Drivers\end{tabular}                          & \cellcolor[HTML]{9AFF99}Open-source                                   & \cellcolor[HTML]{9AFF99}Industrial                                                          & \cellcolor[HTML]{9AFF99}\begin{tabular}[c]{@{}l@{}}Simulated\\ Annealing\end{tabular}        & \cellcolor[HTML]{9AFF99}\begin{tabular}[c]{@{}l@{}}90- \\ Percentile\end{tabular} \\
+\cellcolor[HTML]{9AFF99}\begin{tabular}[c]{@{}l@{}}Search-Based\\ Testing\end{tabular} & \cellcolor[HTML]{9AFF99}\begin{tabular}[c]{@{}l@{}}Emulation-\\ Based\end{tabular} & \cellcolor[HTML]{9AFF99}\begin{tabular}[c]{@{}l@{}}Peer-to-peer \\ L. Drivers\end{tabular} &                                                                       &                                                                                             & \cellcolor[HTML]{9AFF99}Tabu Search                                                          & \cellcolor[HTML]{9AFF99}\begin{tabular}[c]{@{}l@{}}80-\\ Percentile\end{tabular}  \\
+                                                                                       &                                                                                    &                                                                                            &                                                                       &                                                                                             & Ant Colony                                                                                   & \cellcolor[HTML]{9AFF99}\begin{tabular}[c]{@{}l@{}}70- \\ Percentile\end{tabular} \\
+                                                                                       &                                                                                    &                                                                                            &                                                                       &                                                                                             & \begin{tabular}[c]{@{}l@{}}Particle \\ Swarm\end{tabular}                                    & \cellcolor[HTML]{9AFF99}Maximum                                                   \\
+                                                                                       &                                                                                    &                                                                                            &                                                                       &                                                                                             & \begin{tabular}[c]{@{}l@{}}Hill \\ Climbing\end{tabular}                                     & \cellcolor[HTML]{9AFF99}Minimal                                                  
+\end{tabular}
+\end{table}
+
+
+
+
+\bibliographystyle{spphys}
+\bibliography{bibfile}
+
+
+
+\end{document}
+% end of file template.tex
+
