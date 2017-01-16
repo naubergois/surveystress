@@ -1,6 +1,6 @@
 \newcommand{\noopsort}[1]{} \newcommand{\printfirst}[2]{#1}
   \newcommand{\singleletter}[1]{#1} \newcommand{\switchargs}[2]{#2#1}
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -293,5 +293,287 @@ D.~Arcelli, V.~Cortellessa, C.~Trubiani, Proceedings of the 8th international
   33--42 (2012).
 \newblock \doi{10.1145/2304696.2304704}.
 \newblock \urlprefix\url{http://doi.acm.org/10.1145/2304696.2304704}
+
+\bibitem{Havelund2006}
+K.~Havelund, M.~N{\'{u}}{\~{n}}ez, G.~Roşu, B.~Wolff, \emph{{Formal Approaches
+  to Software Testing and Runtime Verification}} (2006).
+\newblock \urlprefix\url{http://www.ulb.tu-darmstadt.de/tocs/79304567.pdf}
+
+\bibitem{Oliner2011}
+A.J. Oliner, \emph{{Using Influence to Understand Complex Systems}} (Stanford
+  University, 2011).
+\newblock \urlprefix\url{http://books.google.com.br/books?id=bynaAuMtiSAC}
+
+\bibitem{Kaczanowski2012}
+T.~Kaczanowski, \emph{{Practical unit testing with testNG and Mockito}} (2012)
+
+\bibitem{Geiger}
+C.~Geiger,   (2014).
+\newblock
+  \urlprefix\url{ftp://ftp.informatik.uni-stuttgart.de/pub/library/medoc.ustuttgart{\_}fi/FACH-0188/FACH-0188.pdf}
+
+\bibitem{Avritzer2012a}
+A.~Avritzer, A.B. Bondi, in \emph{Resilience Assessment and Evaluation of
+  Computing Systems} (2012), pp. 305--322
+
+\bibitem{Mayo2013}
+M.~Mayo, S.~Spacey, Lecture Notes in Computer Science (Springer Berlin
+  Heidelberg, 2013), pp. 158--171.
+\newblock
+  \urlprefix\url{http://link.springer.com/chapter/10.1007/978-3-642-39742-4{\_}13}
+
+\bibitem{Avritzer1993d}
+A.~Avritzer, B.~Larson, in \emph{ACM SIGSOFT Software Engineering Notes} (ACM,
+  New York, NY, USA, 1993), ISSTA '93, pp. 82--88.
+\newblock \doi{10.1145/154183.154244}
+
+\bibitem{Wegener1999}
+J.~Wegener, H.~Sthamer, H.~Pohlheim, Proceedings 20th IEEE Real-Time Systems
+  Symposium (Cat. No.99CB37054)  (1999).
+\newblock \doi{10.1109/REAL.1999.818852}
+
+\bibitem{Abu-nimeh2001}
+S.~Abu-nimeh, S.~Nair, M.~Marchetti,   (2001)
+
+\bibitem{Barros2007}
+M.D. Barros, J.~Shiau, \ldots and Networks, 2007. \ldots  (2007)
+
+\bibitem{Jiang2008b}
+Z.M.Z. Jiang, A.E.A. Hassan, G.~Hamann, P.~Flora, in \emph{IEEE International
+  Conference on Software Maintenance, ICSM} (2008), pp. 307--316.
+\newblock
+  \urlprefix\url{http://ieeexplore.ieee.org/xpl/login.jsp?tp={\&}arnumber=4658079{\&}url=http://ieeexplore.ieee.org/xpls/abs{\_}all.jsp?arnumber=4658079
+  http://ieeexplore.ieee.org/xpls/abs{\_}all.jsp?arnumber=4658079}
+
+\bibitem{Yu2010a}
+L.~Yu, W.T. Tsai, X.~Chen, L.~Liu, Y.~Zhao, L.~Tang, W.~Zhao, in
+  \emph{Proceedings - 5th IEEE International Symposium on Service-Oriented
+  System Engineering, SOSE 2010} (2010), pp. 181--188.
+\newblock \doi{10.1109/SOSE.2010.36}
+
+\bibitem{Nivas2011}
+T.~Nivas, C.~Csallner, in \emph{European Conference on Software Engineering /
+  Foundations of Software Engineering} (2011)
+
+\bibitem{Bazilinskyy2013}
+P.~Bazilinskyy, M.~Brunner, Student Conference on Optimisation of Software
+  (2013).
+\newblock
+  \urlprefix\url{http://www0.cs.ucl.ac.uk/staff/Yuanyuan.Zhang/StuConOS2013/stuconos2013{\_}submission{\_}3.pdf}
+
+\bibitem{Gias2014}
+A.U. Gias, K.~Sakib, in \emph{Proceedings of the 28th international conference
+  on Software engineering}, vol. undefined (2014), vol. undefined, pp.
+  608--609.
+\newblock \doi{10.1145/2591062.2591139}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1145/2591062.2591139}
+
+\bibitem{Alebrahim}
+A.~Alebrahim, M.~Heisel, in \emph{ACM International Conference Proceeding
+  Series}, vol. 08-12-July (2015), vol. 08-12-July.
+\newblock \doi{10.1145/2855321.2855357}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1145/2855321.2855357}
+
+\bibitem{Avritzer1994}
+A.~Avritzer, E.~Weyuker, \ldots international symposium on Software testing
+  \ldots pp. 44--57 (1994).
+\newblock \doi{10.1145/186258.186507}
+
+\bibitem{Avritzer1995}
+A.~Avritzer, E.~Weyuker, Software Engineering, IEEE {\ldots} \textbf{21}(9),
+  705 (1995).
+\newblock
+  \urlprefix\url{http://ieeexplore.ieee.org/xpl/login.jsp?tp={\&}arnumber=464549{\&}url=http://ieeexplore.ieee.org/xpls/abs{\_}all.jsp?arnumber=464549
+  http://ieeexplore.ieee.org/xpls/abs{\_}all.jsp?arnumber=464549}
+
+\bibitem{Yang1996}
+C.S.D. Yang, L.L. Pollock, SIGSOFT Softw. Eng. Notes \textbf{21}(3), 201
+  (1996).
+\newblock \doi{10.1145/226295.226318}.
+\newblock \urlprefix\url{http://dl.acm.org/citation.cfm?id=226318
+  http://doi.acm.org/10.1145/226295.226318}
+
+\bibitem{Weyuker2000}
+E.~Weyuker, F.~Vokolos, IEEE transactions on software engineering
+  \textbf{26}(12), 1147 (2000).
+\newblock \doi{10.1109/32.888628}
+
+\bibitem{El-far2001}
+I.K. El-far, J.a. Whittaker, Encyclopedia of Software Engineering pp. 1--22
+  (2001).
+\newblock \doi{10.1002/0471028959.sof207}
+
+\bibitem{Brown2003}
+M.a. Brown, E.~Tapolcsanyi, Matrix pp. 1--17 (2003)
+
+\bibitem{Aguilera2003}
+M.K. Aguilera, J.C. Mogul, J.L. Wiener, P.~Reynolds, A.~Muthitacharoen, ACM
+  SIGOPS Operating Systems Review \textbf{37}, 74 (2003).
+\newblock \doi{10.1145/1165389.945454}
+
+\bibitem{Dumitrescu2004}
+C.~Dumitrescu, I.~Raicu, M.~Ripeanu, I.~Foster, Proceedings - IEEE/ACM
+  International Workshop on Grid Computing pp. 289--296 (2004).
+\newblock \doi{10.1109/GRID.2004.21}
+
+\bibitem{Barber2004}
+S.~Barber, {\ldots} Energy Conference, 2004. INTELEC 2004. 26th {\ldots} pp.
+  1--13 (2004).
+\newblock
+  \urlprefix\url{http://ieeexplore.ieee.org/xpls/abs{\_}all.jsp?arnumber=1410995}
+
+\bibitem{Kiran2015}
+S.~Kiran, A.~Mohapatra, R.~Swamy, 2nd International Symposium on Technology
+  Management and Emerging Technologies, ISTMET 2015 - Proceeding pp. 74--78
+  (2015).
+\newblock \doi{10.1109/ISTMET.2015.7359004}
+
+\bibitem{Ag2006}
+D.C. Ag, D.~Berlin, S.~Wappler, Proceedings of the 8th annual conference on
+  Genetic and evolutionary computation pp. 1917--1924 (2006)
+
+\bibitem{Cai2007}
+Y.~Cai, J.~Grundy, J.~Hosking, Proceedings of the twenty-second IEEE/ACM
+  international conference on Automated software engineering - ASE '07 p. 353
+  (2007).
+\newblock \doi{10.1145/1321631.1321684}.
+\newblock
+  \urlprefix\url{http://portal.acm.org/citation.cfm?doid=1321631.1321684}
+
+\bibitem{Nevedrov2007}
+D.~Nevedrov,  pp. 1--11 (2007)
+
+\bibitem{Fritzsche2007}
+P.~Fritzsche, D.~Rexachs, E.~Luque, 2007 4th IEEE Workshop on Intelligent Data
+  Acquisition and Advanced Computing Systems: Technology and Applications
+  (2007).
+\newblock \doi{10.1109/IDAACS.2007.4488453}
+
+\bibitem{Bayan2008}
+M.~Bayan, J.W. Cangussu, Proceedings of the 2008 ACM symposium on Applied
+  computing - SAC '08 p. 661 (2008).
+\newblock \doi{10.1145/1363686.1363847}.
+\newblock
+  \urlprefix\url{http://portal.acm.org/citation.cfm?doid=1363686.1363847}
+
+\bibitem{Afzal2008}
+W.~Afzal, R.~Torkar, R.~Feldt, Proceedings of the Twentieth International
+  Conference on Software Engineering {\&} Knowledge Engineering (SEKE'2008)
+  (October 2015), 488 (2008).
+\newblock
+  \urlprefix\url{http://richard.torkar.googlepages.com/a{\_}systematic{\_}mapping{\_}study{\_}on{\_}non-fu.pdf}
+
+\bibitem{Lutteroth2008}
+C.~Lutteroth, G.~Weber, 2008 12th International IEEE Enterprise Distributed
+  Object Computing Conference pp. 149--158 (2008).
+\newblock \doi{10.1109/EDOC.2008.40}.
+\newblock
+  \urlprefix\url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=4634766}
+
+\bibitem{Acharya2009}
+M.~Acharya, V.~Kommineni, ASE2009 - 24th IEEE/ACM International Conference on
+  Automated Software Engineering pp. 409--420 (2009).
+\newblock \doi{10.1109/ASE.2009.95}
+
+\bibitem{Jiang2009a}
+Z.M. Jiang, A.E. Hassan, G.~Hamann, P.~Flora, 2009 IEEE International
+  Conference on Software Maintenance pp. 125--134 (2009).
+\newblock \doi{10.1109/ICSM.2009.5306331}.
+\newblock
+  \urlprefix\url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=5306331}
+
+\bibitem{Wang2010}
+X.~Wang, B.~Zhou, W.~Li, International Symposium on Parallel and Distributed
+  Processing with Applications pp. 483--490 (2010).
+\newblock \doi{10.1109/ISPA.2010.24}
+
+\bibitem{Malik2010b}
+H.~Malik, Software Engineering, 2010 ACM/IEEE 32nd \ldots \textbf{2}, 421
+  (2010).
+\newblock \doi{10.1145/1810295.1810408}
+
+\bibitem{White2010}
+J.~White, A.~Pilbeam,  p.~6 (2010).
+\newblock \doi{10.1.1.74.371}.
+\newblock \urlprefix\url{http://arxiv.org/abs/1010.3233}
+
+\bibitem{Babbar2011}
+C.~Babbar, N.~Bajpai, D.~Sarmah, International Journal of Technology  (2011)
+
+\bibitem{Barna2011}
+C.~Barna, M.~Litoiu, H.~Ghanbari, International conference on Autonomi pp.
+  91--100 (2011)
+
+\bibitem{Nguyen2011}
+T.H.D. Nguyen, B.~Adams, Z.M. Jiang, A.E. Hassan, M.~Nasser, P.~Flora,
+  Proceedings - Asia-Pacific Software Engineering Conference, APSEC pp.
+  282--289 (2011).
+\newblock \doi{10.1109/APSEC.2011.59}
+
+\bibitem{Shoaib2011}
+Y.~Shoaib, O.~Das, Electronic Notes in Theoretical Computer Science
+  \textbf{275}, 123 (2011).
+\newblock \doi{10.1016/j.entcs.2011.09.009}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1016/j.entcs.2011.09.009}
+
+\bibitem{Santos2011}
+I.d.S. Santos, A.~Santos, P.d.S. Neto, SEKE  (2011)
+
+\bibitem{Zhang2011}
+P.~Zhang, S.~Elbaum, M.B. Dwyer, Proceedings of the 2011 26th IEEE/ACM
+  International Conference on Automated Software Engineering pp. 43--52 (2011).
+\newblock \doi{10.1109/ASE.2011.6100093}.
+\newblock \urlprefix\url{http://dl.acm.org/citation.cfm?id=2190151
+  http://dx.doi.org/10.1109/ASE.2011.6100093}
+
+\bibitem{Catelani2011}
+Computer Standards and Interfaces \textbf{33}(2), 152 (2011).
+\newblock \doi{10.1016/j.csi.2010.06.006}
+
+\bibitem{Yan2012}
+M.~Yan, H.~Sun, X.~Wang, X.~Liu, 2012 IEEE International Conference on Cluster
+  Computing (2), 576 (2012).
+\newblock \doi{10.1109/CLUSTER.2012.20}.
+\newblock
+  \urlprefix\url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=6337826}
+
+\bibitem{Vasar2012}
+M.~Vasar, S.N. Srirama, M.~Dumas, Proceedings of the WICSA/ECSA 2012 Companion
+  Volume on - WICSA/ECSA '12 p.~53 (2012).
+\newblock \doi{10.1145/2361999.2362008}.
+\newblock
+  \urlprefix\url{http://dx.doi.org/10.1145/2361999.2362008$\backslash$nhttp://dl.acm.org/citation.cfm?doid=2361999.2362008}
+
+\bibitem{Malik2013a}
+H.~Malik, H.~Hemmati, A.E. Hassan,  pp. 1012--1021 (2013)
+
+\bibitem{Barna2013}
+C.~Barna, M.~Shtern, M.~Smit, V.~Tzerpos, M.~Litoiu,  \textbf{X}(February)
+  (2013).
+\newblock \doi{10.1145/0000000.0000000}
+
+\bibitem{Jiang2015}
+Z.M. Jiang, A.~Hassan, IEEE Transactions on Software Engineering
+  \textbf{5589}(2), 1 (2015).
+\newblock \doi{10.1109/TSE.2015.2445340}.
+\newblock
+  \urlprefix\url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=7123673}
+
+\bibitem{Harman2015}
+M.~Harman, Y.~Jia, Y.~Zhang, 8th IEEE International Conference on Software
+  Testing, Verification and Validation (ICST) (Icst) (2015).
+\newblock \urlprefix\url{http://www0.cs.ucl.ac.uk/staff/mharman/icst15.pdf}
+
+\bibitem{Shousha2003}
+M.~Shousha, {Performance Stress Testing of Real-Time Systems Using
+  Genetic-Algorithms}.
+\newblock Ph.D. thesis, Carleton University (2003)
+
+\bibitem{Ganapathi2009}
+A.~Ganapathi, {Predicting and optimizing system utilization and performance via
+  statistical machine learning}.
+\newblock Ph.D. thesis (2009).
+\newblock \urlprefix\url{http://escholarship.org/uc/item/9b92g2pz.pdf
+  http://www.mendeley.com/research/predicting-optimizing-system-utilization-performance-via-statistical-machine-learning/{\%}5Cnhttp://www.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-181.pdf}
 
 \end{thebibliography}

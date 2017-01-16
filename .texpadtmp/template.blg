@@ -3,22 +3,35 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: template.aux
 The style file: ../spphys.bst
 Database file #1: ../bibfile.bib
-Repeated entry---line 1039 of file ../bibfile.bib
+Repeated entry---line 559 of file ../bibfile.bib
+ : @article{Avritzer1995
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1201 of file ../bibfile.bib
  : @inproceedings{Gois2016
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1695 of file ../bibfile.bib
+Repeated entry---line 1228 of file ../bibfile.bib
+ : @article{Avritzer1995
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1322 of file ../bibfile.bib
+ : @article{Acharya2009
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1857 of file ../bibfile.bib
  : @article{Bertolino2008
  :                       ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1709 of file ../bibfile.bib
+Repeated entry---line 1871 of file ../bibfile.bib
  : @article{MarkUtting2012
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1986 of file ../bibfile.bib
+Repeated entry---line 2148 of file ../bibfile.bib
  : @book{Halili2008
  :                 ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Alshahwan2001"
 Warning--empty journal in Sandler2004
 Warning--missing publisher in Perry2004
 Warning--missing publisher in Lewis2005
@@ -43,45 +56,62 @@ Warning--missing publisher in Dustin1999
 Warning--missing publisher in Halili2008
 Warning--there's a number but no volume in Wert2013a
 Warning--empty journal in Cortellessa2007
-You've used 60 entries,
+Warning--missing publisher in Havelund2006
+Warning--missing publisher in Kaczanowski2012
+Warning--empty journal in Geiger
+Warning--missing publisher in Avritzer2012a
+Warning--empty booktitle in Mayo2013
+Warning--empty journal in Abu-nimeh2001
+Warning--can't use both volume and number fields in Gias2014
+Warning--can't use both volume and number fields in Gias2014
+Warning--empty journal in Nevedrov2007
+Warning--there's a number but no volume in Afzal2008
+Warning--empty journal in White2010
+Warning--empty author in Catelani2011
+Warning--there's a number but no volume in Yan2012
+Warning--empty journal in Malik2013a
+Warning--empty journal in Barna2013
+Warning--there's a number but no volume in Harman2015
+Warning--missing school in Ganapathi2009
+You've used 113 entries,
             2812 wiz_defined-function locations,
-            996 strings with 17774 characters,
-and the built_in function-call counts, 26161 in all, are:
-= -- 2489
-> -- 539
-< -- 19
-+ -- 294
-- -- 159
-* -- 1206
-:= -- 2529
-add.period$ -- 47
-call.type$ -- 60
-change.case$ -- 7
+            1368 strings with 30297 characters,
+and the built_in function-call counts, 55047 in all, are:
+= -- 5678
+> -- 1000
+< -- 49
++ -- 598
+- -- 295
+* -- 2449
+:= -- 5074
+add.period$ -- 102
+call.type$ -- 113
+change.case$ -- 9
 chr.to.int$ -- 6
-cite$ -- 84
-duplicate$ -- 3123
-empty$ -- 2234
-format.name$ -- 202
-if$ -- 5796
+cite$ -- 154
+duplicate$ -- 6629
+empty$ -- 4405
+format.name$ -- 382
+if$ -- 12170
 int.to.chr$ -- 0
-int.to.str$ -- 60
-missing$ -- 524
-newline$ -- 236
-num.names$ -- 59
-pop$ -- 1258
+int.to.str$ -- 113
+missing$ -- 991
+newline$ -- 450
+num.names$ -- 111
+pop$ -- 2550
 preamble$ -- 2
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1275
+skip$ -- 2997
 stack$ -- 0
-substring$ -- 890
-swap$ -- 2277
-text.length$ -- 17
+substring$ -- 2110
+swap$ -- 5053
+text.length$ -- 47
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 24
-while$ -- 136
-width$ -- 62
-write$ -- 547
-(There were 4 error messages)
+warning$ -- 41
+while$ -- 290
+width$ -- 116
+write$ -- 1063
+(There were 7 error messages)
